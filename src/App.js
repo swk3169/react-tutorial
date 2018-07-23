@@ -1,11 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import MyName from './MyName';
+import Counter from './Counter';
 import './App.css'
 
 class App extends Component {
   render() {
     return (
-      <MyName name="리액트" />
+      <Fragment>
+        <div>
+          <MyName name="리액트" />
+        </div>
+        <div>
+          <Counter />
+        </div>
+      </Fragment>
     );
   }
 }

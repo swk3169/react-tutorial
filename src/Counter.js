@@ -2,19 +2,46 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
     state = {
-        number : 0
+        number: 0
     }
 
     handleIncrease = () => {
-        this.setState({
-            number: this.state.number + 1
-        });
+        {/*첫 번째 방법 */ }
+        // this.setState({
+        //     number: this.state.number + 1
+        // });
+        {/*두 번째 방법 */ }
+        // this.setState(
+        //     (state) => ({
+        //         number: state.number + 1
+        //     })
+        // );
+        {/*세 번째 방법 */ }
+        this.setState(
+            ({ number }) => ({
+                number: number + 1
+            })
+        );
     }
 
     handleDecrease = () => {
-        this.setState({
-            number: this.state.number - 1
-        });
+        {/*첫 번째 방법 */ }
+        // this.setState({
+        //     number: this.state.number - 1
+        // });
+        {/*두 번째 방법 */ }
+        // this.setState(
+        //     (state) => ({
+        //         number: state.number - 1
+        //     })
+        // );
+        {/*세 번째 방법 */ }
+        this.setState(
+            ({ number }) => ({
+                number: number - 1
+            })
+        );
+
     }
 
     render() {
